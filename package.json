@@ -1,0 +1,29 @@
+{
+  "name": "pywalify",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:backend": "python scripts/build_backend.py",
+    "tauri:build": "npm run build:backend && tauri build"
+  },
+  "dependencies": {
+    "@melloware/coloris": "^0.25.0",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-dialog": "^2.4.0",
+    "@tauri-apps/plugin-fs": "^2.4.2",
+    "@tauri-apps/plugin-opener": "^2",
+    "@tauri-apps/plugin-shell": "^2.3.3",
+    "@types/node": "^24.6.2",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3"
+  }
+}

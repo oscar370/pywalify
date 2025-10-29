@@ -1,0 +1,26 @@
+{
+  "name": "Pywal",
+
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/rust:1": {}
+  },
+
+  "runArgs": ["--volume=/tmp/.X11-unix:/tmp/.X11-unix"],
+
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}"
+  },
+
+  "postCreateCommand": "python -m venv .venv && .venv/bin/pip install -r backend/requirements.txt",
+
+  "postStartCommand": "source .venv/bin/activate",
+
+  "remoteUser": "vscode"
+}
