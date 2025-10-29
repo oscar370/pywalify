@@ -15,7 +15,10 @@
       {
         "title": "pywalify",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "decorations": true,
+        "theme": null,
+        "titleBarStyle": "Overlay"
       }
     ],
     "security": {

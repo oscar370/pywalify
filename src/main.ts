@@ -29,6 +29,8 @@ class App {
   }
 
   private async init() {
+    this.setupColorSchema();
+
     await setupBackend();
 
     await this.setupElements();
@@ -38,6 +40,16 @@ class App {
         this.navBar.updateUI(newState.view);
         this.updateMainContent(newState.view);
       }
+    });
+  }
+
+  private setupColorSchema() {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    document.documentElement.classList.toggle("dark", mediaQuery.matches);
+
+    mediaQuery.addEventListener("change", (e) => {
+      document.documentElement.classList.toggle("dark", e.matches);
     });
   }
 
