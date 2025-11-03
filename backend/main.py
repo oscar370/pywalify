@@ -3,8 +3,6 @@ import os
 import shutil
 import tempfile
 import logging
-import socket
-from contextlib import closing
 from typing import Any, Dict, List, Literal, Optional, TypedDict, cast
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -326,20 +324,11 @@ async def export_template(
             logger.info("Temporary output deleted: %s", output_path)
 
 
-def find_free_port() -> int:
-    """Find a free port automatically"""
-    with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:
-        s.bind(('127.0.0.1', 0))
-        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        return s.getsockname()[1]
-
-
 if __name__ == "__main__":
     import uvicorn
+    import sys
 
-    port = find_free_port()
-
-    print(f"SERVER_PORT:{port}", flush=True)
+    port = int(sys.argv[1])
 
     uvicorn.run(
         app,

@@ -1,16 +1,11 @@
 import { setState } from "@/store/appStore";
-import { listen } from "@tauri-apps/api/event";
-
-type BackendReadyPayload = {
-  port: number;
-};
+import { invoke } from "@tauri-apps/api/core";
 
 export async function setupBackend() {
-  new Promise<void>((resolve) => {
-    listen<BackendReadyPayload>("backend-ready", (event) => {
-      const { port } = event.payload;
-      setState({ backendURL: `http://127.0.0.1:${port}` });
-      resolve();
-    });
+  new Promise<void>(async (resolve) => {
+    const port = await invoke<number>("get_backend_port");
+    setState({ backendURL: `http://127.0.0.1:${port}` });
+    console.log(port);
+    resolve();
   });
 }

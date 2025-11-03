@@ -1,7 +1,7 @@
 {
   "name": "pywalify",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "preview": "vite preview",
@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "build:backend": "python scripts/build_backend.py",
-    "tauri:build": "npm run build:backend && tauri build"
+    "tauri:build": "npm run build:backend && cargo tauri build"
   },
   "dependencies": {
     "@melloware/coloris": "^0.25.0",

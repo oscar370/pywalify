@@ -26,7 +26,7 @@ def main():
         sys.exit(1)
 
     source_path = 'dist/main'
-    target_dir = 'src-tauri/binaries'
+    target_dir = 'src-tauri/binaries/'
     target_path = os.path.join(target_dir, 'main-x86_64-unknown-linux-gnu')
 
     os.makedirs(target_dir, exist_ok=True)

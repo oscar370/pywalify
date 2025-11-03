@@ -37,16 +37,37 @@ Download the appropriate package for your platform from the [Releases](https://g
 
 The repository has a dev container. It will be ready with the dependencies for development. Otherwise, the dependencies are:
 
-- Python 3.13+
-- Node.js 22+ (LTS)
+- Python 3.12+
+- Node.js 22+
 - Rust and Cargo
-- Linux: `libwebkit2gtk-4.1-dev build-essential curl wget file libxdo-dev libssl-dev libayatana-appindicator3-dev librsvg2-dev imagemagick cmake xdg-utils`
+- Linux:
+
+  ```bash
+  libwebkit2gtk-4.1-0=2.44.0-2 \
+  libwebkit2gtk-4.1-dev=2.44.0-2 \
+  libjavascriptcoregtk-4.1-0=2.44.0-2 \
+  libjavascriptcoregtk-4.1-dev=2.44.0-2 \
+  gir1.2-javascriptcoregtk-4.1=2.44.0-2 \
+  gir1.2-webkit2-4.1=2.44.0-2 \
+  libappindicator3-dev \
+  librsvg2-dev \
+  patchelf \
+  build-essential \
+  curl \
+  wget \
+  file \
+  libssl-dev \
+  libgtk-3-dev \
+  cmake \
+  xdg-utils \
+  imagemagick \
+  ```
 
 #### Build Steps
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/pywalify.git
+git clone https://github.com/oscar370/pywalify.git
 cd pywalify
 
 # Install Node dependencies
@@ -55,8 +76,8 @@ npm install
 # Build the backend binary
 npm run build:backend
 
-# Build the Tauri application
-npm run tauri build
+# Build the backend binary and Tauri application
+npm run tauri:build
 ```
 
 The built application will be available in `src-tauri/target/release/bundle/`.
@@ -116,7 +137,7 @@ Contributions are welcome. Please open an issue to discuss proposed changes befo
 
 ## License
 
-This project is licensed under the MIT License. See LICENSE file for details.
+This project is licensed under the GPL-3.0 License. See LICENSE file for details.
 
 ## Acknowledgments
 

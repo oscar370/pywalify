@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "pywalify",
-  "version": "0.1.0",
-  "identifier": "com.vscode.pywalify",
+  "version": "1.0.0",
+  "identifier": "com.pywalify.dev",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",
@@ -10,15 +10,15 @@
     "frontendDist": "../dist"
   },
   "app": {
-    "withGlobalTauri": true,
+    "withGlobalTauri": false,
     "windows": [
       {
         "title": "pywalify",
         "width": 800,
         "height": 600,
         "decorations": true,
-        "theme": null,
-        "titleBarStyle": "Overlay"
+        "transparent": false,
+        "theme": "Dark"
       }
     ],
     "security": {
@@ -27,8 +27,13 @@
   },
   "bundle": {
     "active": true,
-    "targets": "all",
-    "externalBin": ["binaries/main"],
-    "icon": ["icons/icon.png"]
+    "targets": ["appimage", "deb", "rpm"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.png"
+    ],
+    "externalBin": ["binaries/main"]
   }
 }

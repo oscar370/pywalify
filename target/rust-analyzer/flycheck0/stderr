@@ -1,8 +1,0 @@
-error: failed to select a version for `tauri`.
-    ... required by package `pywalify v0.1.0 (/workspaces/pywalify/src-tauri)`
-versions that meet the requirements `^2` (locked to 2.8.5) are: 2.8.5
-
-package `pywalify` depends on `tauri` with feature `linux-ipc-protocol` but `tauri` does not have that feature.
-
-
-failed to select a version for `tauri` which could resolve this conflict
