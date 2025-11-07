@@ -1,12 +1,15 @@
 # Pywalify
 
 A desktop application for generating color palettes from images using pywal, with template export capabilities.
+<h3 align="center"><img src="https://i.imgur.com/5WgMACe.gif" width="200px"></h3>
 
 ## Overview
 
 Pywalify provides a graphical interface for pywal's color extraction functionality. Upload an image, generate a 16-color palette, and export the colors in various template formats for use in terminal emulators, text editors, and other applications.
 
 See the wiki for more information [Wiki](https://github.com/oscar370/pywalify/wiki).
+
+<img alt="Screenshot of the pywalify interface" src="https://github.com/user-attachments/assets/2fcec512-3624-47ff-a826-43e0f87fbb5c" />
 
 ## Features
 
