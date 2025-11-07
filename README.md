@@ -6,6 +6,8 @@ A desktop application for generating color palettes from images using pywal, wit
 
 Pywalify provides a graphical interface for pywal's color extraction functionality. Upload an image, generate a 16-color palette, and export the colors in various template formats for use in terminal emulators, text editors, and other applications.
 
+See the wiki for more information [Wiki](https://github.com/oscar370/pywalify/wiki).
+
 ## Features
 
 - **Image-based color generation**: Extract color palettes from any image
@@ -94,6 +96,10 @@ The built application will be available in `src-tauri/target/release/bundle/`.
 ### Setup Development Environment
 
 ```bash
+# Clone the repository
+git clone https://github.com/oscar370/pywalify.git
+cd pywalify
+
 # Install dependencies
 npm install
 
@@ -110,16 +116,6 @@ npm run tauri dev
 > # Install Python dependencies
 > pip install -r backend/requirements.txt
 > ```
-
-## Configuration
-
-The application uses pywal's standard configuration options:
-
-- **Backend**: Choose from available pywal backends (wal, colorz, colorthief, etc.)
-- **Light mode**: Generate palettes optimized for light backgrounds
-- **Saturation**: Adjust color saturation (0.0 - 1.0)
-- **16-color generation**: Generate full 16-color terminal palette
-- **Contrast**: Apply contrast ratio adjustments
 
 ## Template Export
 
