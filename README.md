@@ -124,8 +124,8 @@ npm run tauri dev
 
 Pywalify supports exporting to various template formats:
 
-- Terminal emulators (xresources, alacritty, kitty, etc.)
-- Text editors (vim, emacs, etc.)
+- Terminal emulators
+- Text editors
 - Custom templates using pywal's template syntax
 
 See the [Wiki](https://github.com/oscar370/pywalify/wiki) for template documentation.
