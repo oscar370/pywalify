@@ -34,7 +34,8 @@ The backend is compiled into a standalone binary using PyInstaller and bundled w
 
 ### From Release
 
-Download the appropriate package for your platform from the [Releases](https://github.com/oscar370/pywalify/releases) page:
+Download the appropriate package for your platform from the [Releases](https://github.com/oscar370/pywalify/releases) page.
+> You need to have `Image Magisk` installed on your system.
 
 ### From Source
 
